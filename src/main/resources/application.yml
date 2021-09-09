@@ -2,6 +2,8 @@ server:
   port: 8000
 
 eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.instance_id:${random.value}}
   client:
     fetch-registry: true
     register-with-eureka: true
@@ -47,6 +49,7 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+            - AuthorizationHeaderFilter
         - id: catalog-service
           uri: lb://CATALOG-SERVICE
           predicates:
@@ -76,3 +79,6 @@ spring:
                 baseMessage: Hi, there.
                 preLogger: true
                 postLogger: true
+
+token:
+  secret: user_token
