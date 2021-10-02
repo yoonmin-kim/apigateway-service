@@ -25,3 +25,18 @@ Docker컨테이너를 사용하면 별도의 Guest OS 를 사용할 필요없이
 ### Container
 * 상태값x, Immutable
 * image를 가지고 실체화 -> Container
+### 명령어
+* docker info // 도커 설치정보
+* docker image ls // 도커 이미지 리스트
+* docker container ls // 도커 컨테이너 리스트
+* docker run[OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND][ARG...]
+```
+-d 'detached mode' 흔히말하는 백그라운드 모드
+-p 호스트와 컨테이너의 포트를 연결(포워딩)
+-v 호스트와 컨테이너의 디렉토리를 연결(마운트)
+-e 컨테이너 내에서 사용할 환경변수 설정
+--name 컨테이너 이름 설정
+--rm 프로세스 종료시 컨테이너 자동 제거
+-it -i와-t를 동시에 사용한 것으로 터미널 입력을 위한 옵션
+--link 컨테이너 연결[컨테이너명:별칭]
+```
