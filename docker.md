@@ -59,9 +59,10 @@ docker exec -it mysql bash<br>
 `
 이미 실행된 컨테이너에 추가적인 명령을 전달할때 exec를 사용한다.
 `
+
 <img src="https://user-images.githubusercontent.com/46228593/135862100-68f0e5a0-ba78-4783-a093-93ddd2a2a873.png" width="300"/>
 
-![image](https://user-images.githubusercontent.com/46228593/135862892-eaacdcd7-6540-4226-93cf-31840b153d4d.png)
+<img src="https://user-images.githubusercontent.com/46228593/135862892-eaacdcd7-6540-4226-93cf-31840b153d4d.png" width="500" heigh="400"/>
 
-![image](https://user-images.githubusercontent.com/46228593/135863042-30a81ae3-4a1a-4983-94d7-2b461171368c.png)
+<img src="https://user-images.githubusercontent.com/46228593/135863042-30a81ae3-4a1a-4983-94d7-2b461171368c.png" width="500" heigh="400"/>
 <hr>
