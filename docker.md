@@ -43,26 +43,25 @@ Docker컨테이너를 사용하면 별도의 Guest OS 를 사용할 필요없이
 -it -i와-t를 동시에 사용한 것으로 터미널 입력을 위한 옵션
 --link 컨테이너 연결[컨테이너명:별칭]
 ```
+<hr>
 
 ### **mysql 예시**
 docker pull mysql:5.7
 
-docker run -d -p 13306:3306 -e MYSQL_EMPTY_PASSWORD=true --name mysql mysql:5.7
-
+docker run -d -p 13306:3306 -e MYSQL_EMPTY_PASSWORD=true --name mysql mysql:5.7<br>
 `
 -d 백그라운드로 실행하며 -p 호스트의 3306포트와 컨테이너의 3306포트를 포워딩한다.
 -e 환경변수로 MYSQL_EMPTY_PASSWORD=true 라는 옵션을 주고 --name으로 컨테이너 명을 지정한다.
 컨테이너명을 지정하지 않을 시 랜덤한 값이 부여된다. 마지막으로 컨테이너를 실행할때 사용될 이미지명을 명시한다.
 `
 
-docker exec -it mysql bash
-
+docker exec -it mysql bash<br>
 `
 이미 실행된 컨테이너에 추가적인 명령을 전달할때 exec를 사용한다.
 `
+<img src="https://user-images.githubusercontent.com/46228593/135862100-68f0e5a0-ba78-4783-a093-93ddd2a2a873.png" width="300"/>
 
-<img src="https://user-images.githubusercontent.com/46228593/135862100-68f0e5a0-ba78-4783-a093-93ddd2a2a873.png" width="300" heigh="300"/>
+![image](https://user-images.githubusercontent.com/46228593/135862892-eaacdcd7-6540-4226-93cf-31840b153d4d.png)
 
-<img src="https://user-images.githubusercontent.com/46228593/135862892-eaacdcd7-6540-4226-93cf-31840b153d4d.png" width="500" heigh="300"/>
-
-<img src="https://user-images.githubusercontent.com/46228593/135863042-30a81ae3-4a1a-4983-94d7-2b461171368c.png" width="500" heigh="300"/>
+![image](https://user-images.githubusercontent.com/46228593/135863042-30a81ae3-4a1a-4983-94d7-2b461171368c.png)
+<hr>
