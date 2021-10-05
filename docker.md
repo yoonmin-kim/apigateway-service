@@ -66,3 +66,18 @@ docker exec -it mysql bash<br>
 
 <img src="https://user-images.githubusercontent.com/46228593/135863042-30a81ae3-4a1a-4983-94d7-2b461171368c.png" width="500" heigh="400"/>
 <hr>
+
+### **Dockerfile, 도커 이미지 업로드**
+```
+FROM openjdk:17-ea-11-jdk-slim 
+VOLUME /tmp 
+COPY target/user-service-1.0.jar UserService.jar 
+ENTRYPOINT ["java","-jar","UserService.jar"] 
+```
+
+
+docker build --tag rladbsals23/user-service:1.0 . <br>
+`도커파일 이용해서 빌드`<br>
+docker push rladbsals23/user-service:1.0 <br>
+`도커 허브에 업로드`<br>
+![image](https://user-images.githubusercontent.com/46228593/136013836-caffa4f8-d6ca-4f32-a9f9-bcedd9eee191.png)
